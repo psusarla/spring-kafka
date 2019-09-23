@@ -17,7 +17,9 @@ When the application runs successfully, following output is logged on to console
 
 #### Messages received from the 'aivenMessage' topic
 >Received aiven message: Greetings 1, World!!  
->Received aiven message: Greetings 2, World!!
+>Received aiven message: Greetings 2, World!!  
+
+Also, aiven_message table in the postgres database should have the same messages
 
 # Running pointing to local services
 Install and run Kafka and Postgres   
