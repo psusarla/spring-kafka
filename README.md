@@ -29,3 +29,7 @@ Download and add below two files to the root of the project:
 client.keystore.p12  
 client.truststore.jks
 
+#References
+https://www.baeldung.com/spring-kafka  
+https://codenotfound.com/spring-kafka-consumer-producer-example.html  
+https://www.mkyong.com/spring-boot/spring-boot-spring-data-jpa-postgresql/
