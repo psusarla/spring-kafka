@@ -1,4 +1,4 @@
-### Introduction
+# Introduction
 
 This application has two main components:  
 A producer sends events to a Kafka Topic  
