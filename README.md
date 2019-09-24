@@ -1,13 +1,12 @@
 # Introduction
 
+This is a simple Spring Boot app to demonstrate sending and receiving of messages in Kafka using spring-kafka and Postgres database.
+
 This application has two main components:  
 A producer sends events to a Kafka Topic  
 A consumer receives the events and writes to a postgres database  
 
-
-# Spring-Kafka
-
-This is a simple Spring Boot app to demonstrate sending and receiving of messages in Kafka using spring-kafka.
+# Testing the app
 
 As Kafka topics are not created automatically by default, this application requires that you create the following topic manually.
 
@@ -19,17 +18,26 @@ When the application runs successfully, following output is logged on to console
 >Received aiven message: Greetings 1, World!!  
 >Received aiven message: Greetings 2, World!!  
 
-Also, 'aiven_message' table in the postgres database should have the same messages
+### Entries in the database
+Also,  aiven_message table gets created in the Postgres database, if it does not already exist. And the above two messages will be inserted to the table. 
 
 # Running pointing to local services
 Install and run Kafka and Postgres   
 The application by default runs locally without any changes by running as a spring boot app.
 
 # Running pointing to Aiven servives
-Replace the application.properties sent in email  
-Download and add below two files to the root of the project:  
+Below 3 files are checked into git but are hidden using git-secret:
+application.properties-aiven  
 client.keystore.p12  
-client.truststore.jks
+client.truststore.jks  
+
+Message me if you need these files, I will need your public key to allow access.  
+Once you decrypt the files, you will have to replace the contents of exising application.properties with the one in application.properties-aiven
+
+# Unit Tests
+There are 2 basic integration tests in the application:  
+SpringContextLiveTest - tests if the spring configuration is correct
+AivenRepositoryTests - tests if the app is able to save to the database
 
 # References
 https://www.baeldung.com/spring-kafka  
