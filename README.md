@@ -26,7 +26,7 @@ Install and run Kafka and Postgres
 The application by default runs locally without any changes by running as a spring boot app.
 
 # Running pointing to Aiven servives
-Below 3 files are checked into git but are hidden using git-secret:
+Below 3 files are checked into git but are hidden using git-secret:  
 application.properties-aiven  
 client.keystore.p12  
 client.truststore.jks  
