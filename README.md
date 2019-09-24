@@ -1,4 +1,4 @@
-### Introduction
+# Introduction
 
 This application has two main components:  
 A producer sends events to a Kafka Topic  
@@ -17,7 +17,9 @@ When the application runs successfully, following output is logged on to console
 
 #### Messages received from the 'aivenMessage' topic
 >Received aiven message: Greetings 1, World!!  
->Received aiven message: Greetings 2, World!!
+>Received aiven message: Greetings 2, World!!  
+
+Also, 'aiven_message' table in the postgres database should have the same messages
 
 # Running pointing to local services
 Install and run Kafka and Postgres   
@@ -29,7 +31,7 @@ Download and add below two files to the root of the project:
 client.keystore.p12  
 client.truststore.jks
 
-#References
+# References
 https://www.baeldung.com/spring-kafka  
 https://codenotfound.com/spring-kafka-consumer-producer-example.html  
 https://www.mkyong.com/spring-boot/spring-boot-spring-data-jpa-postgresql/
